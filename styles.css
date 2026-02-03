@@ -31,22 +31,75 @@ a {
 
 
       
-      .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-        background: transparent;
-        backdrop-filter: blur(10px);
-        transition: background 0.3s ease, box-shadow 0.3s ease;
+/* --- New Top Bar Styles --- */
+.top-bar {
+    background: #151414; /* Matches your scrolled navbar color */
+    color: white;
+    font-size: 0.60rem;
+    padding: 8px 0;
+    position: fixed; /* Keep it fixed at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001; /* Higher than navbar */
+
+}
+
+.top-bar-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; 
+}
+
+.top-bar-link {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    /* The "Fitting Border" styles */
+    border: 1px solid rgba(255, 255, 255, 0.649); /* Subtle white border */
+    padding: 4px 15px;                          /* Space inside the border */
+    border-radius: 50px;                        /* Rounds the edges into a pill shape */
+    background: #151414;   /* Very faint background fill */
+}
+
+.top-bar-link:hover {
+    color: #facc15;
+    border-color: #facc15;                      /* Border changes color on hover */
+    background: rgba(250, 204, 21, 0.1);        /* Slight yellow glow on hover */
+}
+
+
+/* --- Adjusting your existing .navbar --- */
+.navbar {
+    position: fixed;
+    top: 35px; /* Pushes the nav down so it doesn't hide under the top bar */
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+/* Update the scroll position if needed */
+.navbar.scrolled {
+    top: 35px; /* Keep it below the top bar even when scrolling */
+    background: #151414;
+}
+
+/* --- Responsive fix for mobile --- */
+@media (max-width: 768px) {
+    .top-bar-container {
+        gap: 1.5rem;
+        font-size: 0.65rem;
     }
-    
-    .navbar.scrolled {
-        background: #151414;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        border-bottom: 1px solid white;
-    }
+}
     .nav-container {
         max-width: 1280px;
         margin: 0 auto;
