@@ -33,7 +33,7 @@ a {
       
 /* --- New Top Bar Styles --- */
 .top-bar {
-    background: #151414; /* Matches your scrolled navbar color */
+    background: linear-gradient(115deg, #1a2429 0%, #0f1216 100%); /* Matches your scrolled navbar color */
     color: white;
     font-size: 0.60rem;
     padding: 8px 0;
@@ -62,10 +62,10 @@ a {
     gap: 0.5rem;
     transition: all 0.3s ease;
     /* The "Fitting Border" styles */
-    border: 1px solid rgba(255, 255, 255, 0.649); /* Subtle white border */
+    border: 1.9px solid rgba(255, 255, 255, 0.649); /* Subtle white border */
     padding: 4px 15px;                          /* Space inside the border */
     border-radius: 50px;                        /* Rounds the edges into a pill shape */
-    background: #151414;   /* Very faint background fill */
+    background: linear-gradient(115deg, #1a2429 0%, #0f1216 100%);/* Very faint background fill */
 }
 
 .top-bar-link:hover {
@@ -90,7 +90,7 @@ a {
 /* Update the scroll position if needed */
 .navbar.scrolled {
     top: 35px; /* Keep it below the top bar even when scrolling */
-    background: #151414;
+   background: linear-gradient(115deg, #1a2429 0%, #0f1216 100%);
 }
 
 /* --- Responsive fix for mobile --- */
@@ -287,7 +287,7 @@ a {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: brightness(0.4);
+    filter: brightness(0.3);
     z-index: -1;
 }
 
@@ -328,7 +328,7 @@ a {
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #ffffff;
-    background-color: #111112;
+    background: linear-gradient(115deg, #1a2429 0%, #0f1216 100%);
     border: 2px solid #ffffff;
     border-radius: 50px;
     text-decoration: none;
