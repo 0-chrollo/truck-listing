@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+    <title>Empire Trucks & Auto Dealers | Free State</title>
+
+</head>
+<body>
+        <!-- ===== NAVIGATION ===== -->
+        <!-- ===== NAVIGATION ===== -->
+        <!-- ===== NAVIGATION ===== -->
+ 
+
+        <div class="top-bar">
+    <div class="top-bar-container">
+        <a href="tel:0720760261" class="top-bar-link">
+            <span><i class="fa-solid fa-phone"></i></span> 072 076 0261
+        </a>
+        <a href="mailto:info@empiretrucks.co.za" class="top-bar-link">
+            <span><i class=""></i></span> info@empiretrucks.co.za
+        </a>
+    </div>
+</div>
+        
+
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <!-- <div class="logo-icon"><img src="ima-logo.png"></div> -->
+                    <div class="logo-main">Empire Trucks</div>
+                </div>
+    
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Our Work</a></li>
+                    <li><a href="#quote">Contact</a></li>
+                </ul>
+    
+                <button class="burger" id="burgerBtn">
+                    <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg id="closeIcon" style="display: none;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+    
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="index.html">Home</a>
+                <a href="gallery.html">Our Work</a>
+                <a href="#quote">Contact</a>
+            </div>
+        </nav>
+
+        <!-- ===== NAVIGATION ===== -->
+        <!-- ===== NAVIGATION ===== -->
+        <!-- ===== NAVIGATION ===== -->
+
+
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">Best Trucks</h1>
+                    <p class="hero-subtitle">Trucks that are affordable and easy. Discover our wide selection of reliable vehicles perfect for work and adventure.</p>
+                    <a href="#" class="hero-button">View Trucks</a>
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <style>
+                    .container {
+                        max-width: 1400px;
+                        margin: 0 auto;
+                        padding: 20px;
+                    }
+            
+                    .grid {
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        gap: 20px;
+                    }
+            
+                    .card {
+                        background: white;
+                        border-radius: 1.5px;
+                        overflow: hidden;
+                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                        transition: transform 0.3s ease, box-shadow 0.3s ease;
+                        display: flex;
+                        flex-direction: column;
+                    }
+            
+                    .card:hover {
+                        transform: translateY(-4px);
+                        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+                    }
+            
+                    .card-image {
+                        position: relative;
+                        width: 100%;
+                        padding-top: 60%;
+                        background-size: cover;
+                        background-position: center;
+                        padding-bottom: 45px;
+                    }
+            
+                   
+                    .card-logo svg {
+                        width: 35px;
+                        height: 35px;
+                    }
+            
+                    .card-banner {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        background: linear-gradient(90deg, #060606 0%, #201e1e 100%);
+                        color: white;
+                        padding: 6px 10px;
+                        font-size: 11px;
+                        text-align: center;
+                    }
+            
+                    .card-banner span {
+                        font-weight: 300;
+                    }
+            
+                    .card-banner strong {
+                        font-weight: 600;
+                    }
+            
+                    .card-content {
+                        padding: 20px;
+                        background: #f5f5f5;
+                        flex-grow: 1;
+                    }
+            
+                    .card-title {
+                        font-size: 24px;
+                        font-weight: 700;
+                        margin-bottom: 12px;
+                        color: #1a1a1a;
+                    }
+            
+                    .card-price {
+                        font-size: 32px;
+                        font-weight: 700;
+                        color: #060606;
+                        margin-bottom: 8px;
+                    }
+            
+                    .card-mileage {
+                        font-size: 24px;
+                        color: #888;
+                        font-weight: 400;
+                        margin-left: 8px;
+                    }
+            
+                    .card-location {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        margin: 12px 0;
+                        font-size: 18px;
+                        color: #666;
+                    }
+            
+                    .location-icon {
+                        width: 20px;
+                        height: 20px;
+                        fill: #888;
+                    }
+            
+                    .card-stock {
+                        font-size: 16px;
+                        color: #888;
+                        margin-top: 8px;
+                    }
+            
+                    .card-button {
+                        width: 100%;
+                        padding: 14px 20px;
+                        background: linear-gradient(90deg, #060606 0%, #1f1d1d 100%);
+                        color: white;
+                        border: none;
+                        font-size: 16px;
+                        font-weight: 600;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+                        margin-top: auto;
+                    }
+            
+                    .card-button:hover {
+                        background: linear-gradient(90deg, #a01829 0%, #c41e3a 100%);
+                    }
+            
+                    .card-button svg {
+                        width: 20px;
+                        height: 20px;
+                        fill: white;
+                    }
+            
+                    @media (max-width: 1200px) {
+                        .grid {
+                            grid-template-columns: repeat(3, 1fr);
+                        }
+                    }
+            
+                    @media (max-width: 900px) {
+                        .grid {
+                            grid-template-columns: repeat(2, 1fr);
+                        }
+                    }
+            
+                    @media (max-width: 600px) {
+                        .grid {
+                            grid-template-columns: 1fr;
+                        }
+                    }
+                </style>
+      
+            <body style="font-family:BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+                <div class="container">
+                    <div class="grid">
+                        <!-- Card 1 -->
+                        <div class="card">
+                            <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&h=500&fit=crop');">
+                                <div class="card-logo">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#c41e3a"/>
+                                        <path d="M2 17L12 22L22 17" stroke="white" stroke-width="2"/>
+                                        <path d="M2 12L12 17L22 12" stroke="#c41e3a" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                
+                                <div class="card-banner">
+                                    <span>Clear. Simple.</span> <strong>Truck Buying</strong>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">2023 Mack AN64T</h3>
+                                <div>
+                                    <span class="card-price">$38,999</span>
+                                    <span class="card-mileage">| 485,718 Miles</span>
+                                </div>
+                                <div class="card-location">
+                                    <svg class="location-icon" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                    </svg>
+                                    <span>Oklahoma City, OK</span>
+                                </div>
+                                <div class="card-stock">Stock # 272103</div>
+                            </div>
+                            <button class="card-button">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                                </svg>
+                                Purchase Vehicle
+                            </button>
+                        </div>
+            
+                        <!-- Card 2 -->
+                        <div class="card">
+                            <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&h=500&fit=crop');">
+                                <div class="card-logo">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#c41e3a"/>
+                                        <path d="M2 17L12 22L22 17" stroke="#c41e3a" stroke-width="2"/>
+                                        <path d="M2 12L12 17L22 12" stroke="#c41e3a" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                
+                                <div class="card-banner">
+                                    <span>Clear. Simple.</span> <strong>Truck Buying</strong>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">2023 Mack AN64T</h3>
+                                <div>
+                                    <span class="card-price">$41,999</span>
+                                    <span class="card-mileage">| 449,481 Miles</span>
+                                </div>
+                                <div class="card-location">
+                                    <svg class="location-icon" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                    </svg>
+                                    <span>North Little Rock, AR</span>
+                                </div>
+                                <div class="card-stock">Stock # 272106</div>
+                            </div>
+                            <button class="card-button">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                                </svg>
+                                Purchase Vehicle
+                            </button>
+                        </div>
+            
+                        <!-- Card 3 -->
+                        <div class="card">
+                            <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&h=500&fit=crop');">
+                                <div class="card-logo">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#c41e3a"/>
+                                        <path d="M2 17L12 22L22 17" stroke="#c41e3a" stroke-width="2"/>
+                                        <path d="M2 12L12 17L22 12" stroke="#c41e3a" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                
+                                <div class="card-banner">
+                                    <span>Clear. Simple.</span> <strong>Truck Buying</strong>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">2023 Mack AN64T</h3>
+                                <div>
+                                    <span class="card-price">$39,999</span>
+                                    <span class="card-mileage">| 467,234 Miles</span>
+                                </div>
+                                <div class="card-location">
+                                    <svg class="location-icon" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                    </svg>
+                                    <span>Dallas, TX</span>
+                                </div>
+                                <div class="card-stock">Stock # 272108</div>
+                            </div>
+                            <button class="card-button">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                                </svg>
+                                Purchase Vehicle
+                            </button>
+                        </div>
+            
+                        <!-- Card 4 -->
+                        <div class="card">
+                            <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&h=500&fit=crop');">
+                                <div class="card-logo">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#c41e3a"/>
+                                        <path d="M2 17L12 22L22 17" stroke="#c41e3a" stroke-width="2"/>
+                                        <path d="M2 12L12 17L22 12" stroke="#c41e3a" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                
+                                <div class="card-banner">
+                                    <span>Clear. Simple.</span> <strong>Truck Buying</strong>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">2023 Mack AN64T</h3>
+                                <div>
+                                    <span class="card-price">$42,999</span>
+                                    <span class="card-mileage">| 438,921 Miles</span>
+                                </div>
+                                <div class="card-location">
+                                    <svg class="location-icon" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                    </svg>
+                                    <span>Memphis, TN</span>
+                                </div>
+                                <div class="card-stock">Stock # 272110</div>
+                            </div>
+                            <button class="card-button">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                                </svg>
+                                Purchase Vehicle
+                            </button>
+                        </div>
+            
+                    </div>
+                </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+<script SRC="scripts.js"></script>
+
+</html>

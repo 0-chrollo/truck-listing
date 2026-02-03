@@ -18,10 +18,10 @@
         <div class="top-bar">
     <div class="top-bar-container">
         <a href="tel:0720760261" class="top-bar-link">
-            <span>📞</span> 072 076 0261
+            <span><i class="fa-solid fa-phone"></i></span> 072 076 0261
         </a>
         <a href="mailto:info@empiretrucks.co.za" class="top-bar-link">
-            <span>✉️</span> info@empiretrucks.co.za
+            <span><i class="fa fa-envelope"></i></span> info@empiretrucks.co.za
         </a>
     </div>
 </div>
@@ -52,7 +52,7 @@
     
             <div class="mobile-menu" id="mobileMenu">
                 <a href="index.html">Home</a>
-                <a href="gallery.html">Our Work</a>
+                <a href="gallery.html">Trucks</a>
                 <a href="#quote">Contact</a>
             </div>
         </nav>
@@ -62,142 +62,11 @@
         <!-- ===== NAVIGATION ===== -->
 
 
-            <style>
-
-                .hero-section {
-                    line-height: 1.6;
-                    position: relative;
-                    min-height: 85vh;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    text-align: center;
-                    padding: 2rem;
-                    overflow: hidden;
-                }
-        
-                /* Background Image */
-                .hero-section::before {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-image: url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2070&auto=format&fit=crop');
-                    background-size: cover;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    filter: brightness(0.4);
-                    z-index: -1;
-                }
-        
-                .hero-content {
-                    position: relative;
-                    z-index: 1;
-                    color: #ffffff;
-                    max-width: 800px;
-                    margin: 0 auto;
-                    animation: fadeInUp 1s ease-out;
-                }
-        
-                .hero-title {
-                    font-size: clamp(2.5rem, 8vw, 5rem);
-                    font-weight: 700;
-                    margin-bottom: 1.5rem;
-                    letter-spacing: 2px;
-                    text-transform: uppercase;
-                    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-                }
-        
-                .hero-subtitle {
-                    font-size: clamp(1.4rem, 4vw, 2rem);
-                    margin-bottom: 3rem;
-                    font-weight: 300;
-                    line-height: 1.8;
-                    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-                    max-width: 600px;
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-        
-                .hero-button {
-                    display: inline-block;
-                    padding: 1.2rem 3rem;
-                    font-size: 1.1rem;
-                    font-weight: 600;
-                    text-transform: uppercase;
-                    letter-spacing: 1px;
-                    color: #ffffff;
-                    background-color: #111112;
-                    border: 2px solid #ffffff;
-                    border-radius: 50px;
-                    text-decoration: none;
-                    transition: all 0.3s ease;
-                    cursor: pointer;
-                    box-shadow: 0 4px 15px rgba(118, 118, 118, 0.4);
-                }
-        
-                .hero-button:hover {
-                    background-color: transparent;
-                    border-color: #ffffff;
-                    transform: translateY(-3px);
-                    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
-                }
-        
-                .hero-button:active {
-                    transform: translateY(-1px);
-                }
-        
-                /* Animation */
-                @keyframes fadeInUp {
-                    from {
-                        opacity: 0;
-                        transform: translateY(30px);
-                    }
-                    to {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
-                }
-        
-                /* Responsive Design */
-                @media (max-width: 768px) {
-                    .hero-section {
-                        padding: 1.5rem;
-                    }
-        
-                    .hero-title {
-                        margin-bottom: 1rem;
-                    }
-        
-                    .hero-subtitle {
-                        margin-bottom: 2rem;
-                    }
-        
-                    .hero-button {
-                        padding: 0.7rem 2rem;
-                        font-size: 0.80rem;
-                    }
-                }
-        
-                @media (max-width: 480px) {
-                    .hero-section {
-                        padding: 1rem;
-                    }
-        
-                    .hero-button {
-                        padding: 0.9rem 1.8rem;
-                        font-size: 0.95rem;
-                    }
-                }
-            </style>
-
             <section class="hero-section">
                 <div class="hero-content">
                     <h1 class="hero-title">Best Trucks</h1>
                     <p class="hero-subtitle">Trucks that are affordable and easy. Discover our wide selection of reliable vehicles perfect for work and adventure.</p>
-                    <a href="#" class="hero-button">View Trucks</a>
+                    <a href="truck-listing.html" class="hero-button">View Trucks</a>
                 </div>
             </section>
 
