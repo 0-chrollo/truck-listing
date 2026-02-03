@@ -85,10 +85,12 @@ a {
     background: transparent;
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
+  
 }
 
 /* Update the scroll position if needed */
 .navbar.scrolled {
+    border-bottom: solid 1.5px white;
     top: 35px; /* Keep it below the top bar even when scrolling */
    background: linear-gradient(115deg, #1a2429 0%, #0f1216 100%);
 }
