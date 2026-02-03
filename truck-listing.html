@@ -98,6 +98,454 @@
 
 
 
+
+
+
+
+
+
+                <style>
+        
+                    .connect {
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+                        padding: 25px;
+                      
+                    }
+            
+                    .filter-container {
+                        max-width: 1200px;
+                        margin: 0 auto;
+                    }
+            
+                    .filter-section {
+                        margin-bottom: 20px;
+                    }
+            
+                    .filter-label {
+                        font-size: 16px;
+                        font-weight: 600;
+                        margin-bottom: 8px;
+                        display: block;
+                        color: #333;
+                    }
+            
+                    .filter-row {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 10px;
+                    }
+            
+                    select {
+                        width: 100%;
+                        padding: 12px 35px 12px 12px;
+                        font-size: 14px;
+                        border: 2px solid #ddd;
+                        border-radius: 6px;
+                        background-color: white;
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+                        background-repeat: no-repeat;
+                        background-position: right 12px center;
+                        background-size: 12px;
+                        appearance: none;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        cursor: pointer;
+                        color: #333;
+                        transition: border-color 0.2s;
+                    }
+            
+                    select:focus {
+                        outline: none;
+                        border-color: #171c17;
+                    }
+            
+                    select:hover {
+                        border-color: #999;
+                    }
+            
+                    .apply-button {
+                        width: 100%;
+                        padding: 14px;
+                        margin-top: 15px;
+                        font-size: 16px;
+                        font-weight: 600;
+                        border: none;
+                        border-radius: 2px;
+                        background: linear-gradient(115deg, #1a2429 0%, #0f1216 100%);
+                        color: white;
+                        cursor: pointer;
+                        transition: background-color 0.2s;
+                    }
+            
+                    .apply-button:hover {
+                        background-color: #45a049;
+                    }
+            
+                    .apply-button:active {
+                        background-color: #3d8b40;
+                    }
+            
+                    .full-width-select {
+                        width: 100%;
+                    }
+            
+                    /* Responsive adjustments */
+                    @media (max-width: 480px) {
+                        .connect {
+                            padding: 15px;
+                        }
+            
+                        .filter-label {
+                            font-size: 14px;
+                        }
+            
+                        select {
+                            padding: 10px 30px 10px 10px;
+                            font-size: 13px;
+                            background-position: right 10px center;
+                        }
+            
+                        .filter-row {
+                            gap: 8px;
+                        }
+            
+                        .apply-button {
+                            padding: 12px;
+                            font-size: 15px;
+                        }
+                    }
+            
+                    @media (max-width: 360px) {
+                        select {
+                            padding: 9px 28px 9px 8px;
+                            font-size: 12px;
+                        }
+            
+                        .filter-label {
+                            font-size: 13px;
+                        }
+            
+                        .apply-button {
+                            font-size: 14px;
+                        }
+                    }
+            
+                    /* Optional: Add some visual feedback */
+                    .filter-section {
+                        animation: fadeIn 0.3s ease-in;
+                    }
+            
+                    @keyframes fadeIn {
+                        from {
+                            opacity: 0;
+                            transform: translateY(-10px);
+                        }
+                        to {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+            
+                    /* More Filters Section */
+                    .more-filters-section {
+                        margin-bottom: 20px;
+                    }
+            
+                    .more-filters-toggle {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 8px;
+                        width: 100%;
+                        padding: 12px;
+                        font-size: 15px;
+                        font-weight: 600;
+                        border: 2px solid #ddd;
+                        border-radius: 6px;
+                        background-color: white;
+                        color: #333;
+                        cursor: pointer;
+                        transition: all 0.2s;
+                    }
+            
+                    .more-filters-toggle:hover {
+                        border-color: #999;
+                        background-color: #f9f9f9;
+                    }
+            
+                    .more-filters-toggle .chevron {
+                        transition: transform 0.3s ease;
+                    }
+            
+                    .more-filters-toggle.active .chevron {
+                        transform: rotate(180deg);
+                    }
+            
+                    .more-filters-content {
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: max-height 0.3s ease-out;
+                        margin-top: 0;
+                    }
+            
+                    .more-filters-content.show {
+                        max-height: 500px;
+                        margin-top: 15px;
+                    }
+            
+                    @media (max-width: 480px) {
+                        .more-filters-toggle {
+                            padding: 11px;
+                            font-size: 14px;
+                        }
+                    }
+            
+                    @media (max-width: 360px) {
+                        .more-filters-toggle {
+                            font-size: 13px;
+                        }
+                    }
+                </style>
+     <section class="connect">
+                <div class="filter-container">
+                    <!-- Price Filters -->
+                    <div class="filter-section">
+                        <label class="filter-label">Price</label>
+                        <div class="filter-row">
+                            <select id="priceMin">
+                                <option value="">Min</option>
+                                <option value="0">R0</option>
+                                <option value="50000">R50 000</option>
+                                <option value="75000">R75 000</option>
+                                <option value="100000">R100 000</option>
+                                <option value="125000">R125 000</option>
+                                <option value="150000">R150 000</option>
+                                <option value="200000">R200 000</option>
+                                <option value="250000">R250 000</option>
+                                <option value="300000">R300 000</option>
+                                <option value="400000">R400 000</option>
+                                <option value="500000">R500 000</option>
+                            </select>
+                            <select id="priceMax">
+                                <option value="">Max</option>
+                                <option value="50000">R50 000</option>
+                                <option value="75000">R75 000</option>
+                                <option value="100000">R100 000</option>
+                                <option value="125000">R125 000</option>
+                                <option value="150000">R150 000</option>
+                                <option value="200000">R200 000</option>
+                                <option value="250000">R250 000</option>
+                                <option value="300000">R300 000</option>
+                                <option value="400000">R400 000</option>
+                                <option value="500000">R500 000</option>
+                                <option value="750000">R750 000</option>
+                                <option value="1000000">R1 000 000</option>
+                            </select>
+                        </div>
+                    </div>
+            
+                    <!-- Mileage Filters -->
+                    <div class="filter-section">
+                        <label class="filter-label">Mileage</label>
+                        <div class="filter-row">
+                            <select id="mileageMin">
+                                <option value="">Min</option>
+                                <option value="0">0 km</option>
+                                <option value="10000">10 000 km</option>
+                                <option value="25000">25 000 km</option>
+                                <option value="50000">50 000 km</option>
+                                <option value="75000">75 000 km</option>
+                                <option value="100000">100 000 km</option>
+                                <option value="150000">150 000 km</option>
+                                <option value="200000">200 000 km</option>
+                            </select>
+                            <select id="mileageMax">
+                                <option value="">Max</option>
+                                <option value="10000">10 000 km</option>
+                                <option value="25000">25 000 km</option>
+                                <option value="50000">50 000 km</option>
+                                <option value="75000">75 000 km</option>
+                                <option value="100000">100 000 km</option>
+                                <option value="150000">150 000 km</option>
+                                <option value="200000">200 000 km</option>
+                                <option value="250000">250 000 km</option>
+                                <option value="300000">300 000 km</option>
+                            </select>
+                        </div>
+                    </div>
+            
+                    <!-- More Filters Toggle -->
+                    <div class="more-filters-section">
+                        <button class="more-filters-toggle" onclick="toggleMoreFilters()">
+                            <span>More Filters</span>
+                            <svg class="chevron" width="16" height="16" viewBox="0 0 16 16">
+                                <path fill="currentColor" d="M8 11L3 6h10z"/>
+                            </svg>
+                        </button>
+                        
+                        <div class="more-filters-content" id="moreFiltersContent">
+                            <!-- Year Filters -->
+                            <div class="filter-section">
+                                <label class="filter-label">Year</label>
+                                <div class="filter-row">
+                                    <select id="yearMin">
+                                        <option value="">Min</option>
+                                        <option value="2000">2000</option>
+                                        <option value="2005">2005</option>
+                                        <option value="2010">2010</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
+                                    </select>
+                                    <select id="yearMax">
+                                        <option value="">Max</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
+                                        <option value="2026">2026</option>
+                                    </select>
+                                </div>
+                            </div>
+            
+                            <!-- Transmission Filter -->
+                            <div class="filter-section">
+                                <label class="filter-label">Transmission</label>
+                                <select id="transmission" class="full-width-select">
+                                    <option value="">Any</option>
+                                    <option value="manual">Manual</option>
+                                    <option value="automatic">Automatic</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Apply Filters Button -->
+                    <button class="apply-button" onclick="applyFilters()">Apply Filters</button>
+                </div>
+            
+                <script>
+                    function toggleMoreFilters() {
+                        const content = document.getElementById('moreFiltersContent');
+                        const toggle = document.querySelector('.more-filters-toggle');
+                        
+                        if (content.classList.contains('show')) {
+                            content.classList.remove('show');
+                            toggle.classList.remove('active');
+                        } else {
+                            content.classList.add('show');
+                            toggle.classList.add('active');
+                        }
+                    }
+            
+                    function applyFilters() {
+                        const priceMin = document.getElementById('priceMin').value;
+                        const priceMax = document.getElementById('priceMax').value;
+                        const mileageMin = document.getElementById('mileageMin').value;
+                        const mileageMax = document.getElementById('mileageMax').value;
+                        const yearMin = document.getElementById('yearMin').value;
+                        const yearMax = document.getElementById('yearMax').value;
+                        const transmission = document.getElementById('transmission').value;
+            
+                        console.log('Filters Applied:');
+                        console.log('Price:', priceMin, '-', priceMax);
+                        console.log('Mileage:', mileageMin, '-', mileageMax);
+                        console.log('Year:', yearMin, '-', yearMax);
+                        console.log('Transmission:', transmission);
+            
+                        // You can add your filter logic here
+                        let message = `Filters Applied!\nPrice: ${priceMin || 'Any'} - ${priceMax || 'Any'}\nMileage: ${mileageMin || 'Any'} - ${mileageMax || 'Any'}`;
+                        
+                        if (yearMin || yearMax) {
+                            message += `\nYear: ${yearMin || 'Any'} - ${yearMax || 'Any'}`;
+                        }
+                        
+                        if (transmission) {
+                            message += `\nTransmission: ${transmission.charAt(0).toUpperCase() + transmission.slice(1)}`;
+                        }
+                        
+                        alert(message);
+                    }
+            
+                    // Optional: Apply filters when dropdowns change
+                    document.querySelectorAll('select').forEach(select => {
+                        select.addEventListener('change', function() {
+                            console.log(this.id + ' changed to:', this.value);
+                        });
+                    });
+                </script>
+   </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <style>
                     .container {
                         max-width: 1250px;

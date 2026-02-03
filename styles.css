@@ -156,7 +156,7 @@ a {
 
     .nav-menu a {
         transition: color 0.3s;
-        color:rgb(6, 10, 59);
+        color:rgb(250, 250, 250);
     }
 
     .nav-menu a:hover {
