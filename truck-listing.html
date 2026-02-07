@@ -37,7 +37,7 @@
     
                 <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="gallery.html">Our Work</a></li>
+                    <li><a href="truck-listing.html">Our Trucks</a></li>
                     <li><a href="#quote">Contact</a></li>
                 </ul>
     
@@ -1003,8 +1003,168 @@
 
 
 
+        <footer class="footer">
+            <div class="footer-container">
+                <!-- Company Info -->
+                <div class="footer-section">
+                    <h3>Empire Trucks & Auto Dealer</h3>
+                    <p>
+                        Empire Trucks & Auto Dealer is a trusted steel, aluminum, and construction company based in Limpopo. 
+                        We specialise in gates, doors, windows, burglar proofing, carports, fencing, and general construction — delivering strong, reliable workmanship.
+                    </p>
+                    
+                    <h3 style="margin-top: 1.5rem;">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61554415933695" target="_blank" class="social-icon" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                
+                    </div>
+                </div>
+        
+                <!-- Quick Links -->
+                <div class="footer-section-lu">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="truck-listing.html">All trucks</a>
+                        <a href="#quote">Contact</a>
+                    </div>
+                </div>
+        
+                <!-- Contact Info -->
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+        
+        
+                        <div class="contact-item">
+                            <span><i class="fa-brands fa-whatsapp"></i></span>
+                            <a href="https://wa.me/27713970255">+27 71 397 0255</a>
+                        </div>
+        
+                        <div class="contact-item">
+                            <span><i class="fa-solid fa-envelope"></i></span>
+                            <a href="mailto:info@steel4pound.co.za">info@empiretruckdealers.co.za</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="footer-bottom">
+                <p>&copy; 2026 Empire Trucks & Auto Dealers. All rights reserved.</p>
+            </div>
+        </footer>
 
 
+
+
+        <style>
+
+        /* ===== FOOTER STYLES ===== */
+.footer {
+    background: linear-gradient(115deg, #1a2429 0%, #0f1216 100%);
+    color: white;
+    padding: 3rem 1rem 1.5rem;
+}
+
+.footer-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section p,
+.footer-section-lu a {
+    color: #ffffff;
+    line-height: 1.8;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: white;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.emergency-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #facc15;
+    margin-top: 0.5rem;
+}
+
+/* Social Links Styles */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    color: rgb(20, 18, 18);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background:rgb(20, 20, 20);
+    color: rgb(255, 255, 255);
+    transform: translateY(-3px);
+}
+
+.social-icon i {
+    font-size: 1.2rem;
+}
+
+.footer-bottom {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: #ced1d6;
+    font-size: 0.875rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (min-width: 768px) {
+    .footer-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+</style>
 
 
 
