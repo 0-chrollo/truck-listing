@@ -37,7 +37,7 @@
     
                 <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="gallery.html">Our Work</a></li>
+                    <li><a href="truck-listing.html">Our Trucks</a></li>
                     <li><a href="#quote">Contact</a></li>
                 </ul>
     
@@ -53,7 +53,7 @@
     
             <div class="mobile-menu" id="mobileMenu">
                 <a href="index.html">Home</a>
-                <a href="gallery.html">Our Work</a>
+                <a href="truck-listing.html">Our Trucks</a>
                 <a href="#quote">Contact</a>
             </div>
         </nav>
@@ -75,6 +75,603 @@
 
 
 
+
+
+
+
+
+
+
+
+                <style>
+                    /* Two Column Layout */
+                    .layout-wrapper {
+                        max-width: 1400px;
+                        margin: 0 auto;
+                        padding: 25px;
+                        display: grid;
+                        grid-template-columns: 1fr 750px;
+                        gap: 20px;
+                        align-items: start;
+                    }
+            
+                    /* Truck Container Section Styles */
+                    .trucks-container {
+                        padding: 0;
+                    }
+            
+                    .main-image-container {
+                        position: relative;
+                        width: 100%;
+                        max-width: 600px;
+                        margin-bottom: 30px;
+                        background: #f0f0f0;
+                        border-radius: 1px;
+                        overflow: hidden;
+                    }
+            
+                    .main-image-wrapper {
+                        position: relative;
+                        width: 100%;
+                        padding-bottom: 60%; /* 5:3 aspect ratio */
+                    }
+            
+                    .main-image {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+            
+                    .nav-button {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background: rgba(0, 0, 0, 0.6);
+                        color: white;
+                        border: none;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        font-size: 24px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: background 0.3s;
+                        z-index: 10;
+                    }
+            
+                    .nav-button:hover {
+                        background: rgba(0, 0, 0, 0.8);
+                    }
+            
+                    .nav-button:active {
+                        transform: translateY(-50%) scale(0.95);
+                    }
+            
+                    .prev-button {
+                        left: 15px;
+                    }
+            
+                    .next-button {
+                        right: 15px;
+                    }
+            
+                    .thumbnail-grid {
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        gap: 10px;
+                        max-width: 450px;
+                    }
+            
+                    .thumbnail-item {
+                        position: relative;
+                        padding-bottom: 100%; /* Square aspect ratio */
+                        background: #e0e0e0;
+                        border-radius: 1px;
+                        overflow: hidden;
+                        cursor: pointer;
+                        transition: transform 0.2s, box-shadow 0.2s;
+                    }
+            
+                    .thumbnail-item:hover {
+                        transform: scale(1.05);
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                    }
+            
+                    .thumbnail-item.active {
+                  
+                    }
+            
+                    .thumbnail-image {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+            
+                    /* Vehicle Specs Card */
+                    .specs-container {
+                        position: sticky;
+                        top: 20px;
+                    }
+            
+                    .specs-card {
+                        background: linear-gradient(115deg, #212a2f 0%, #0b0d10 100%);
+                        border-radius: 1px;
+                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                        padding: 24px;
+                    }
+            
+                    .specs-title {
+                        font-size: 24px;
+                        font-weight: 700;
+                        margin: 0 0 24px 0;
+                        color: #d9d9d9;
+                        border-bottom: 2px solid #dbdbdb;
+                        padding-bottom: 12px;
+                    }
+            
+                    .specs-section {
+                        margin-bottom: 24px;
+                    }
+            
+                    .specs-section:last-child {
+                        margin-bottom: 0;
+                    }
+            
+                    .specs-section-title {
+                        font-size: 16px;
+                        font-weight: 600;
+                        margin: 0 0 12px 0;
+                        color: #d9d9d9;
+                    }
+            
+                    .specs-table {
+                        width: 100%;
+                        border-collapse: collapse;
+                    }
+            
+                    .specs-table tr {
+                        border-bottom: 1px solid #e5e5e5;
+                    }
+            
+                    .specs-table tr:last-child {
+                        border-bottom: none;
+                    }
+            
+                    .spec-label {
+                        padding: 10px 0;
+                        font-weight: 500;
+                        color: #ababab;
+                        width: 45%;
+                    }
+            
+                    .spec-value {
+                        padding: 10px 0;
+                        color: #dedede;
+                        font-weight: 400;
+                    }
+            
+                    .features-list {
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                    }
+            
+                    .features-list li {
+                        padding: 8px 0;
+                        color: #1a1a1a;
+                        position: relative;
+                        padding-left: 20px;
+                    }
+            
+                    .features-list li:before {
+                        content: "✓";
+                        position: absolute;
+                        left: 0;
+                        color: #007bff;
+                        font-weight: bold;
+                    }
+            
+                    /* Responsive adjustments for small devices */
+                    @media (max-width: 1024px) {
+                        .layout-wrapper {
+                            grid-template-columns: 1fr;
+                            gap: 30px;
+                        }
+            
+                        .specs-container {
+                            position: static;
+                        }
+                    }
+            
+                    @media (max-width: 768px) {
+                        .layout-wrapper {
+                            padding: 15px;
+                        }
+            
+                        .trucks-container {
+                            padding: 0;
+                        }
+            
+                        .main-image-container {
+                            margin-bottom: 20px;
+                        }
+            
+                        .main-image-wrapper {
+                            padding-bottom: 75%; /* Taller on mobile for better visibility */
+                        }
+            
+                        .nav-button {
+                            width: 45px;
+                            height: 45px;
+                            font-size: 20px;
+                        }
+            
+                        .prev-button {
+                            left: 10px;
+                        }
+            
+                        .next-button {
+                            right: 10px;
+                        }
+            
+                        .thumbnail-grid {
+                            gap: 8px;
+                            max-width: 100%;
+                        }
+                    }
+            
+                    @media (max-width: 480px) {
+                        .nav-button {
+                            width: 40px;
+                            height: 40px;
+                            font-size: 18px;
+                        }
+            
+                        .thumbnail-grid {
+                            gap: 6px;
+                        }
+                    }
+            
+                    /* Image counter */
+                    .image-counter {
+                        position: absolute;
+                        bottom: 15px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background: rgba(0, 0, 0, 0.6);
+                        color: white;
+                        padding: 8px 16px;
+                        border-radius: 20px;
+                        font-size: 14px;
+                        z-index: 10;
+                    }
+                </style>
+          
+                <!-- Two Column Layout -->
+                <div class="layout-wrapper">
+                    <!-- Left Column: Truck Gallery -->
+                    <section class="trucks-container">
+                        <div class="main-image-container">
+                            <div class="main-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&h=600&fit=crop" 
+                                     alt="Truck Image" 
+                                     class="main-image" 
+                                     id="mainImage">
+                                
+                                <button class="nav-button prev-button" id="prevBtn" aria-label="Previous image">
+                                    &#8249;
+                                </button>
+                                
+                                <button class="nav-button next-button" id="nextBtn" aria-label="Next image">
+                                    &#8250;
+                                </button>
+                                
+                                <div class="image-counter" id="imageCounter">1 / 9</div>
+                            </div>
+                        </div>
+            
+                        <div class="thumbnail-grid" id="thumbnailGrid">
+                            <!-- Replace these image URLs with your own truck images -->
+                            <div class="thumbnail-item active" data-index="0">
+                                <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&h=600&fit=crop" 
+                                     alt="Truck 1" 
+                                     class="thumbnail-image">
+                            </div>
+                            <div class="thumbnail-item" data-index="1">
+                                <img src="https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&h=600&fit=crop" 
+                                     alt="Truck 2" 
+                                     class="thumbnail-image">
+                            </div>
+            
+                 
+                           
+                            <div class="thumbnail-item" data-index="6">
+                                <img src="https://images.unsplash.com/photo-1581540222194-0def2dda95b8?w=800&h=600&fit=crop" 
+                                     alt="Truck 7" 
+                                     class="thumbnail-image">
+                            </div>
+                            <div class="thumbnail-item" data-index="7">
+                                <img src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?w=800&h=600&fit=crop" 
+                                     alt="Truck 8" 
+                                     class="thumbnail-image">
+                            </div>
+                            <div class="thumbnail-item active" data-index="0">
+                                <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&h=600&fit=crop" 
+                                     alt="Truck 1" 
+                                     class="thumbnail-image">
+                            </div>
+                        </div>
+                    </section>
+            
+                    <!-- Right Column: Vehicle Specs -->
+                    <aside class="specs-container">
+                        <div class="specs-card">
+                            <h2 class="specs-title">Vehicle Specifications</h2>
+                            
+                            <div class="specs-section">
+                                <h3 class="specs-section-title">General Information</h3>
+                                <table class="specs-table">
+                                    <tr>
+                                        <td class="spec-label">Make</td>
+                                        <td class="spec-value">Freightliner</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="spec-label">Model</td>
+                                        <td class="spec-value">Cascadia</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="spec-label">Year</td>
+                                        <td class="spec-value">2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="spec-label">VIN</td>
+                                        <td class="spec-value">1FUJGHDV8PLBC1234</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="spec-label">Mileage</td>
+                                        <td class="spec-value">45,000 km</td>
+                                    </tr>
+                                </table>
+                            </div>
+            
+                            <div class="specs-section">
+                                <h3 class="specs-section-title">Engine & Performance</h3>
+                                <table class="specs-table">
+                                    <tr>
+                                        <td class="spec-label">Engine</td>
+                                        <td class="spec-value">DD15 12.8L I6</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="spec-label">Horsepower</td>
+                                        <td class="spec-value">505 HP</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="spec-label">Torque</td>
+                                        <td class="spec-value">1,850 lb-ft</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="spec-label">Transmission</td>
+                                        <td class="spec-value">12-Speed Automated</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="spec-label">Fuel Type</td>
+                                        <td class="spec-value">Diesel</td>
+                                    </tr>
+                                </table>
+                            </div>
+            
+                            <div class="specs-section">
+                                <h3 class="specs-section-title">Dimensions & Capacity</h3>
+                                <table class="specs-table">
+                                    <tr>
+                                        <td class="spec-label">GVWR</td>
+                                        <td class="spec-value">36,000 lbs</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="spec-label">Wheelbase</td>
+                                        <td class="spec-value">244 in</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="spec-label">Sleeper Size</td>
+                                        <td class="spec-value">76 in Mid-Roof</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="spec-label">Fuel Capacity</td>
+                                        <td class="spec-value">200 gallons</td>
+                                    </tr>
+                                </table>
+                            </div>
+            
+                 
+                        </div>
+                    </aside>
+                </div>
+            
+                <script>
+                    let currentIndex = 0;
+            
+                    // Elements
+                    const mainImage = document.getElementById('mainImage');
+                    const prevBtn = document.getElementById('prevBtn');
+                    const nextBtn = document.getElementById('nextBtn');
+                    const imageCounter = document.getElementById('imageCounter');
+                    const thumbnails = document.querySelectorAll('.thumbnail-item');
+            
+                    // Get all images from HTML
+                    const thumbnailImages = document.querySelectorAll('.thumbnail-image');
+                    const totalImages = thumbnailImages.length;
+            
+                    // Initialize counter
+                    imageCounter.textContent = `1 / ${totalImages}`;
+            
+                    // Add click handlers to thumbnails
+                    thumbnails.forEach((thumbnail, index) => {
+                        thumbnail.addEventListener('click', () => showImage(index));
+                    });
+            
+                    // Show image at specific index
+                    function showImage(index) {
+                        currentIndex = index;
+                        const selectedThumbnail = thumbnailImages[currentIndex];
+                        mainImage.src = selectedThumbnail.src;
+                        imageCounter.textContent = `${currentIndex + 1} / ${totalImages}`;
+                        
+                        // Update active thumbnail
+                        thumbnails.forEach((thumb, i) => {
+                            thumb.classList.toggle('active', i === currentIndex);
+                        });
+                    }
+            
+                    // Navigate to previous image
+                    function previousImage() {
+                        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+                        showImage(currentIndex);
+                    }
+            
+                    // Navigate to next image
+                    function nextImage() {
+                        currentIndex = (currentIndex + 1) % totalImages;
+                        showImage(currentIndex);
+                    }
+            
+                    // Event listeners
+                    prevBtn.addEventListener('click', previousImage);
+                    nextBtn.addEventListener('click', nextImage);
+            
+                    // Keyboard navigation
+                    document.addEventListener('keydown', (e) => {
+                        if (e.key === 'ArrowLeft') {
+                            previousImage();
+                        } else if (e.key === 'ArrowRight') {
+                            nextImage();
+                        }
+                    });
+            
+                    // Touch swipe support for mobile
+                    let touchStartX = 0;
+                    let touchEndX = 0;
+            
+                    mainImage.addEventListener('touchstart', (e) => {
+                        touchStartX = e.changedTouches[0].screenX;
+                    });
+            
+                    mainImage.addEventListener('touchend', (e) => {
+                        touchEndX = e.changedTouches[0].screenX;
+                        handleSwipe();
+                    });
+            
+                    function handleSwipe() {
+                        if (touchEndX < touchStartX - 50) {
+                            nextImage();
+                        }
+                        if (touchEndX > touchStartX + 50) {
+                            previousImage();
+                        }
+                    }
+                </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Company Info -->
+        <div class="footer-section">
+            <h3>Empire Trucks & Auto Dealer</h3>
+            <p>
+                Empire Trucks & Auto Dealer is a trusted steel, aluminum, and construction company based in Limpopo. 
+                We specialise in gates, doors, windows, burglar proofing, carports, fencing, and general construction — delivering strong, reliable workmanship.
+            </p>
+            
+            <h3 style="margin-top: 1.5rem;">Follow Us</h3>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61554415933695" target="_blank" class="social-icon" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+        
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section-lu">
+            <h5>Quick Links</h5>
+            <br>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="truck-listing.html">All trucks</a>
+                <a href="#quote">Contact</a>
+            </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <div class="contact-info">
+
+
+                <div class="contact-item">
+                    <span><i class="fa-brands fa-whatsapp"></i></span>
+                    <a href="https://wa.me/27713970255">+27 71 397 0255</a>
+                </div>
+
+                <div class="contact-item">
+                    <span><i class="fa-solid fa-envelope"></i></span>
+                    <a href="mailto:info@steel4pound.co.za">info@empiretruckdealers.co.za</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Empire Trucks & Auto Dealers. All rights reserved.</p>
+    </div>
+</footer>
+            </body>
+    
+     
+
+            <script src="scripts.js"></script>
+
+            </html>
 
 
 
