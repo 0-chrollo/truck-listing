@@ -31,7 +31,7 @@
             <div class="nav-container">
                 <div class="logo">
                     <!-- <div class="logo-icon"><img src="ima-logo.png"></div> -->
-                    <div class="logo-main">Empire Trucks</div>
+                    <div class="logo-main">Empire Trucks & Auto Dealers </div>
                 </div>
     
                 <ul class="nav-menu">
@@ -64,7 +64,7 @@
 
             <section class="hero-section">
                 <div class="hero-content">
-                    <h1 class="hero-title">Best Trucks</h1>
+                    <h1 class="hero-title"></h1>
                     <p class="hero-subtitle">Trucks that are affordable and easy. Discover our wide selection of reliable vehicles perfect for work and adventure.</p>
                     <a href="truck-listing.html" class="hero-button">View Trucks</a>
                 </div>
@@ -72,6 +72,344 @@
 
 
 
+
+
+
+
+
+
+<style>
+    /* ─── SECTION 1: Hero split ─────────────────────────────── */
+    .faw-hero-wrap {
+      display: flex;
+      width: 100%;
+      min-height: 420px;
+      overflow: hidden;
+    }
+
+    .faw-hero-text {
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding: 56px 48px 56px 40px;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-family: 'Barlow', sans-serif;
+    }
+
+    .faw-eyebrow {
+      font-family: 'Barlow', sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #9aa0ac;
+      margin-bottom: 8px;
+    }
+
+    .faw-hero-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #1a2744;
+      letter-spacing: 0.02em;
+      line-height: 1.0;
+      margin-bottom: 20px;
+    }
+
+    .faw-hero-text p {
+      font-family: 'Barlow', sans-serif;
+      font-size: 13.5px;
+      line-height: 1.65;
+      color: #555;
+      margin-bottom: 14px;
+      max-width: 420px;
+    }
+
+    .faw-hero-text p:last-of-type {
+      margin-bottom: 28px;
+    }
+
+    .faw-btn-dark {
+        
+      display: inline-block;
+      padding: 10px 22px;
+      border: 2px solid #1a2744;
+      color: #ffffff;
+      font-family: 'Barlow', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      background: linear-gradient(115deg, #1a2429 0%, #0f1216 100%); /* Matches your scrolled navbar color */
+ 
+      transition: background 0.2s, color 0.2s;
+      width: fit-content;
+    }
+
+    .faw-btn-dark:hover {
+      background: #1a2744;
+      color: #fff;
+    }
+
+    .faw-hero-img {
+      flex: 0 0 50%;
+      max-width: 50%;
+      background-image: url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80');
+      background-size: cover;
+      background-position: center;
+      min-height: 380px;
+      background-color: #c8b89a;
+    }
+
+    /* ─── SECTION 2: Service split ──────────────────────────── */
+    .faw-service-wrap {
+      display: flex;
+      width: 100%;
+      min-height: 380px;
+      overflow: hidden;
+    }
+
+    .faw-service-img {
+      flex: 0 0 38%;
+      max-width: 38%;
+      background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80');
+      background-size: cover;
+      background-position: center;
+      min-height: 340px;
+      background-color: #2a2a2a;
+    }
+
+    .faw-service-text {
+      flex: 0 0 62%;
+      max-width: 62%;
+      background: linear-gradient(115deg, #1a2429 0%, #0f1216 100%); /* Matches your scrolled navbar color */
+ 
+      padding: 56px 52px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-family: 'Barlow', sans-serif;
+    }
+
+    .faw-eyebrow-blue {
+      font-family: 'Barlow', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #5b8fd4;
+      margin-bottom: 8px;
+    }
+
+    .faw-service-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(28px, 3.5vw, 44px);
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #ffffff;
+      letter-spacing: 0.04em;
+      line-height: 1.0;
+      margin-bottom: 20px;
+    }
+
+    .faw-service-text p {
+      font-family: 'Barlow', sans-serif;
+      font-size: 13.5px;
+      line-height: 1.65;
+      color: #c8d0de;
+      margin-bottom: 28px;
+      max-width: 480px;
+    }
+
+    .faw-btn-white {
+      display: inline-block;
+      padding: 10px 22px;
+      border: 2px solid #ffffff;
+      color: #ffffff;
+      font-family: 'Barlow', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      background: transparent;
+      transition: background 0.2s, color 0.2s;
+      width: fit-content;
+    }
+
+    .faw-btn-white:hover {
+      background: #ffffff;
+      color: #1a2744;
+    }
+
+    /* ─── MOBILE: stack vertically ──────────────────────────── */
+    @media (max-width: 768px) {
+
+      .faw-hero-wrap {
+        flex-direction: column;
+        min-height: unset;
+      }
+
+      .faw-hero-text {
+        flex: unset;
+        max-width: 100%;
+        width: 100%;
+        padding: 44px 28px 40px 28px;
+      }
+
+      .faw-hero-img {
+        flex: unset;
+        max-width: 100%;
+        width: 100%;
+        min-height: 280px;
+      }
+
+      .faw-hero-title {
+        font-size: 38px;
+      }
+
+      .faw-service-wrap {
+        flex-direction: column;
+        min-height: unset;
+      }
+
+      /* Content first on mobile */
+      .faw-service-text {
+        flex: unset;
+        max-width: 100%;
+        width: 100%;
+        padding: 44px 28px;
+        order: 1;
+      }
+
+      /* Image below on mobile */
+      .faw-service-img {
+        flex: unset;
+        max-width: 100%;
+        width: 100%;
+        min-height: 260px;
+        order: 2;
+      }
+
+      .faw-service-title {
+        font-size: 32px;
+      }
+    }
+  </style>
+
+  <!-- ── SECTION 1: FAW Newlands Hero ── -->
+  <section class="faw-hero-wrap">
+    <div class="faw-hero-text">
+      <p class="faw-eyebrow">Durability and Longevity</p>
+      <h1 class="faw-hero-title">FAW Newlands</h1>
+      <p>
+        As a leading supplier of commercial vehicles in Gauteng, South Africa, we
+        pride ourselves on delivering reliable and high-quality trucks to meet the
+        diverse needs of our customers. At FAW Trucks Newlands, we offer a range of
+        heavy-duty and medium-duty trucks built to perform no matter the job.
+      </p>
+      <p>
+        Our trucks are engineered to meet the demands of the most challenging
+        industries, including mining, construction, and logistics. Our experienced
+        team is dedicated to providing expert advice and support to help you find
+        the right commercial vehicle for your needs.
+      </p>
+      <a href="truck-listing.html" class="faw-btn-dark">View Vehicles</a>
+    </div>
+
+    <!-- Replace URL with your real quarry truck photo -->
+    <div class="faw-hero-img" role="img" aria-label="FAW truck in quarry environment"></div>
+  </section>
+
+  <!-- ── SECTION 2: Service Department ── -->
+  <section class="faw-service-wrap">
+
+    <!-- Replace URL with your real cab interior photo -->
+    <div class="faw-service-img" role="img" aria-label="FAW truck cab interior dashboard view"></div>
+
+    <div class="faw-service-text">
+      <p class="faw-eyebrow-blue">A Full-Service Dealership</p>
+      <h2 class="faw-service-title">The Service Department</h2>
+      <p>
+        At FAW Newlands, we're dedicated to offering you the best service experience. Our
+        skilled technicians and friendly sales staff are committed to ensuring you get the best
+        customer satisfaction possible.
+      </p>
+      <a href="#" class="faw-btn-white">Contact Us</a>
+    </div>
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+  
+  <footer class="footer">
+    <div class="footer-container">
+        <!-- Company Info -->
+        <div class="footer-section">
+            <h3>Empire Trucks & Auto Dealer</h3>
+            <p>
+                Empire Trucks & Auto Dealer is a trusted steel, aluminum, and construction company based in Limpopo. 
+                We specialise in gates, doors, windows, burglar proofing, carports, fencing, and general construction — delivering strong, reliable workmanship.
+            </p>
+            
+            <h3 style="margin-top: 1.5rem;">Follow Us</h3>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61554415933695" target="_blank" class="social-icon" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+        
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section-lu">
+            <h5>Quick Links</h5>
+            <br>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="truck-listing.html">All trucks</a>
+                <a href="#quote">Contact</a>
+            </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <div class="contact-info">
+
+
+                <div class="contact-item">
+                    <span><i class="fa-brands fa-whatsapp"></i></span>
+                    <a href="https://wa.me/27713970255">+27 71 397 0255</a>
+                </div>
+
+                <div class="contact-item">
+                    <span><i class="fa-solid fa-envelope"></i></span>
+                    <a href="mailto:info@steel4pound.co.za">info@empiretruckdealers.co.za</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Empire Trucks & Auto Dealers. All rights reserved.</p>
+    </div>
+</footer>
 
     
         </body>
