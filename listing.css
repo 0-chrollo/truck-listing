@@ -67,8 +67,8 @@
 
 .hero-button {
     display: inline-block;
-    padding: 1.2rem 3rem;
-    font-size: 1.1rem;
+    padding: 1.2rem 2rem;
+    font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -585,9 +585,9 @@ width: fit-content;
 }
 
 .page-btn.active {
-    background: #000000;
+    background: #1b1919;
     color: #ffffff;
-    border-color: #000000;
+    border-color: #181717;
 }
 
 .page-btn:disabled {
@@ -596,5 +596,5 @@ width: fit-content;
 }
 
 .page-btn:hover:not(.active):not(:disabled) {
-    border-color: #000000;
+    border-color: #0e0e0e;
 }
